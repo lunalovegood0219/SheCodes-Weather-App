@@ -3,7 +3,7 @@ body {
   background-size: 1570px;
   background-repeat: no-repeat;
   background-position: center center;
-
+  font-family: 'Mulish', sans-serif;  
 }
 .appWrapper {
   max-width: 700px;
@@ -13,4 +13,51 @@ body {
     padding: 20px;
     border: 1px solid #667377;
     backdrop-filter: blur(50px);
+    border-radius: 10px;
+}
+
+ h1{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    line-height: 30px;
+ }
+.city-temp{
+    text-align: right;
+}
+.searchIcon{
+    position: relative;
+    left: -10px;
+    bottom: -4px;
+}
+ul {
+    list-style: none;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    padding-right: 9px;
+    padding-top: 6px;
+    position: relative;
+    left: -32px;
+    margin-bottom: 50px;
+}
+strong {
+    color: #0B5ED7;
+}
+hr {
+    margin: 5px;
+    color: #31212C;
+}
+.preview{
+    text-align: center;
+}
+.prOne, .prtwo, .prThree, .prFour, .prFive{
+    transition: 200ms ease-in-out;
+}
+.peOne:hover, .prTwo:hover, .prThree:hover, .prFour:hover, .prFive:hover{
+     border: 0.2px solid #0B5ED7;
+     background-color: #0B5ED7;
+     border-radius: 10px;
+     cursor: text;
+     color: aliceblue;
+    
 }
