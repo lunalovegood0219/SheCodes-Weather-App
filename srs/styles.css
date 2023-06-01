@@ -18,7 +18,7 @@ body {
 .icon{
     width: 80px;
     position: relative;
-    
+    right: -25px;
 }
 
  h1{
@@ -46,6 +46,7 @@ ul {
     padding-top: 6px;
     position: relative;
     left: -32px;
+    top: -40px;
     margin-bottom: 50px;
 }
 strong {
