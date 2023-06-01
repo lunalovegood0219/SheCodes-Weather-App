@@ -17,8 +17,8 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let days = data.getDay();
-  return `${daysOfWeek} ${hour}:${minutes}`;
+  let days = daysOfWeek[data.getDay()];
+  return `${days} ${hour}:${minutes}`;
 }
 function displayTemp(response) {
   console.log(response.data);
