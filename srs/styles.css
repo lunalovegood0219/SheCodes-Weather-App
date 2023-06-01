@@ -24,6 +24,9 @@ body {
  .selected-city,ul{
     text-transform: capitalize;
  }
+ .selected-city::first-letter,ul::first-letter{
+    text-transform: uppercase;
+ }
 .city-temp{
     text-align: right;
 }

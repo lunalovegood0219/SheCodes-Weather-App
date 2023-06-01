@@ -2,6 +2,12 @@ function formatDate(timestamp) {
   let data = new Date(timestamp);
   let hour = data.getHours();
   let minutes = data.getMinutes();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   let daysOfWeek = [
     "Sunday",
     "Monday",
