@@ -15,14 +15,16 @@ body {
     backdrop-filter: blur(50px);
     border-radius: 10px;
 }
+.icon{
+    width: 80px;
+    position: relative;
+    
+}
 
  h1{
     margin-top: 15px;
     margin-bottom: 0px;
     line-height: 30px;
- }
- .selected-city,ul{
-    text-transform: capitalize;
  }
  .selected-city::first-letter,ul::first-letter{
     text-transform: uppercase;
@@ -69,4 +71,7 @@ hr {
 }
 .info{
     text-decoration: none;
+}
+.info-icon{
+    width: 80px;
 }
