@@ -21,6 +21,9 @@ body {
     margin-bottom: 0px;
     line-height: 30px;
  }
+ .selected-city,ul{
+    text-transform: capitalize;
+ }
 .city-temp{
     text-align: right;
 }
@@ -60,4 +63,7 @@ hr {
      cursor: text;
      color: aliceblue;
     
+}
+.info{
+    text-decoration: none;
 }
