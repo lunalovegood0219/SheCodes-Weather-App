@@ -31,6 +31,8 @@ body {
  }
 .city-temp{
     text-align: right;
+    position: relative;
+    top: -20px;
 }
 .searchIcon{
     position: relative;
