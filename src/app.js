@@ -30,7 +30,7 @@ function displayTemp(response) {
   let currentDate = document.querySelector("#currentDate");
   let icon = document.querySelector("#icon");
   currentTempElement.innerHTML = Math.round(response.data.main.temp);
-  currentCity.innerHTML = `${city}`;
+  currentCity.innerHTML = `${response.data.name}`;
   humidity.innerHTML = `${response.data.main.humidity}%`;
   windSpeed.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   description.innerHTML = response.data.weather[0].description;
@@ -39,9 +39,21 @@ function displayTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  icon.setAttribute(
+    "alt",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
-let apiKey = "51f128ddb960a0cbed5d6f3eea37ad01";
-let city = "hamedan";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemp);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  searchWeather(cityInput.value);
+}
+function searchWeather(city) {
+  let apiKey = "51f128ddb960a0cbed5d6f3eea37ad01";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemp);
+}
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
