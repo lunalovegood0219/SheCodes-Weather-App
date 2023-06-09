@@ -88,3 +88,4 @@ function searchWeather(city) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+displayForcast();
