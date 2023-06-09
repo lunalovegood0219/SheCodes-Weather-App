@@ -20,6 +20,28 @@ function formatDate(timestamp) {
   let days = daysOfWeek[data.getDay()];
   return `${days} ${hour}:${minutes}`;
 }
+function displayForcast() {
+  let forcastElement = document.querySelector("#forcast");
+  let forecastDays = ["Tue", "Wed", "The", "Fri", "Sat"];
+
+  let forcastHtml = `<div class="row preview">`;
+  forecastDays.forEach(function (eachDay) {
+    forcastHtml =
+      forcastHtml +
+      `
+  <div class="col forcastPreview">
+  <div class="weatherForcast">
+  <div class="forcast-day">${eachDay}</div>
+  <img src="/img/Smiley face_Two Color.svg" width="50px" alt="">
+   <div class="forcast-temp">12°c</div>
+   </div>
+  </div>
+  `;
+  });
+
+  forcastHtml = forcastHtml + `</div>`;
+  forcastElement.innerHTML = forcastHtml;
+}
 function displayTemp(response) {
   console.log(response.data);
   let currentTempElement = document.querySelector("#currentTemp");
@@ -57,3 +79,4 @@ function searchWeather(city) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+displayForcast();

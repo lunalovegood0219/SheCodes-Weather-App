@@ -61,10 +61,10 @@ hr {
 .preview{
     text-align: center;
 }
-.prOne, .prtwo, .prThree, .prFour, .prFive{
+.forcastPreview{
     transition: 200ms ease-in-out;
 }
-.peOne:hover, .prTwo:hover, .prThree:hover, .prFour:hover, .prFive:hover{
+.forcastPreview:hover{
      border: 0.2px solid #0B5ED7;
      background-color: #0B5ED7;
      border-radius: 10px;
