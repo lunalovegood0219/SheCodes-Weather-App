@@ -40,10 +40,10 @@ function displayForcast(response) {
   <div class="col forcastPreview">
   <div class="weatherForcast">
   <div class="forcast-day">${previewWeather(forcastDay.dt)}</div>
-  <img src="https://openweathermap.org/img/wn/${
+  <div> <img src="https://openweathermap.org/img/wn/${
     forcastDay.weather[0].icon
-  }@2x.png" width="42px" alt="">
-   <div class="forcast-temp">${Math.round(forcastDay.temp.day)}°C</div>
+  }@2x.png" width="42px" alt=""> </div>
+   <span class="forcast-temp">${Math.round(forcastDay.temp.day)}°C</span> <small> <span>13°C </span> </small>
    </div>
   </div>
   `;

@@ -54,6 +54,9 @@ ul {
 strong {
     color: #0B5ED7;
 }
+small{
+    color: #3d3c3c;
+}
 hr {
     margin: 5px;
     color: #31212C;
@@ -65,8 +68,8 @@ hr {
     transition: 200ms ease-in-out;
 }
 .forcastPreview:hover{
-     border: 0.2px solid #0B5ED7;
-     background-color: #0B5ED7;
+     border: 0.2px solid #588DB7;
+     background-color: #588DB7;
      border-radius: 10px;
      cursor: text;
      color: aliceblue;
