@@ -43,7 +43,11 @@ function displayForcast(response) {
   <div> <img src="https://openweathermap.org/img/wn/${
     forcastDay.weather[0].icon
   }@2x.png" width="42px" alt=""> </div>
-   <span class="forcast-temp">${Math.round(forcastDay.temp.day)}°C</span> <small> <span>13°C </span> </small>
+   <span class="forcast-temp">${Math.round(
+     forcastDay.temp.max
+   )}°C</span> <small> <span>${Math.round(
+          forcastDay.temp.min
+        )}°C </span> </small>
    </div>
   </div>
   `;
