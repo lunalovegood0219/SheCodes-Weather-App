@@ -30,7 +30,7 @@ function displayForcast(response) {
   console.log(response.data);
   let forcastElement = document.querySelector("#forcast");
   let forcast = response.data.daily;
-
+  forcast.shift();
   let forcastHtml = `<div class="row preview">`;
   forcast.forEach(function (forcastDay, index) {
     if (index < 4){
