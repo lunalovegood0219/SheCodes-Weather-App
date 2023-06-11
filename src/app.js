@@ -33,7 +33,7 @@ function displayForcast(response) {
 
   let forcastHtml = `<div class="row preview">`;
   forcast.forEach(function (forcastDay, index) {
-    if (index < 5){
+    if (index < 4){
       forcastHtml =
         forcastHtml +
         `
