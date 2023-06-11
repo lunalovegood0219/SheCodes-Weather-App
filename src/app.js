@@ -20,6 +20,12 @@ function formatDate(timestamp) {
   let days = daysOfWeek[data.getDay()];
   return `${days} ${hour}:${minutes}`;
 }
+function previewWeather (timestamp){
+  let data = new Date (timestamp*1000);
+  let weekDays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  let weeksDay = data.getDay();
+  return weekDays[weeksDay];
+}
 function displayForcast(response) {
   console.log(response.data);
   let forcastElement = document.querySelector("#forcast");
@@ -32,8 +38,8 @@ function displayForcast(response) {
       `
   <div class="col forcastPreview">
   <div class="weatherForcast">
-  <div class="forcast-day">${forcastDay.dt}</div>
-  <img src="https://openweathermap.org/img/wn/${forcastDay.weather[0].icon}@2x.png" width="50px" alt="">
+  <div class="forcast-day">${previewWeather(forcastDay.dt)}</div>
+  <img src="https://openweathermap.org/img/wn/${forcastDay.weather[0].icon}@2x.png" width="42px" alt="">
    <div class="forcast-temp">${forcastDay.temp.day}</div>
    </div>
   </div>
