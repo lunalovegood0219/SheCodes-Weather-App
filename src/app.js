@@ -88,9 +88,15 @@ function displayTemp(response) {
 
 function handleSubmit(event) {
   event.preventDefault();
+  let city = "tehran";
   let cityInput = document.querySelector("#city-input");
   searchWeather(cityInput.value);
+  if (cityInput.value === "") {
+    searchWeather(city);
+  }
 }
+let defaultCity = "tehran";
+searchWeather(defaultCity);
 function searchWeather(city) {
   let apiKey = "50fa4024e3b1d5eac2f51ab18a47e997";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
