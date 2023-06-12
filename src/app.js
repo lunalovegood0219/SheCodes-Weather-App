@@ -94,7 +94,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let city = "tehran";
   let cityInput = document.querySelector("#city-input");
-  searchWeather(cityInput.value);
+  searchWeather(cityInput.value.trim());
   if (cityInput.value === "") {
     searchWeather(city);
   }
