@@ -1,6 +1,6 @@
 body {
-  background-image: url("/img/pexels-eberhard-grossgasteiger-844297.jpg") ;
-  background-size: 1570px;
+  background-image: url("/img/nathan-anderson-L95xDkSSuWw-unsplash.jpg") ;
+  background-size: 1380px;
   background-repeat: no-repeat;
   background-position: center center;
   font-family: 'Mulish', sans-serif;  
@@ -11,15 +11,18 @@ body {
 }
 .weatherApp {
     padding: 20px;
-    border: 1px solid #667377;
+    border: 1px solid #131F35;
     backdrop-filter: blur(50px);
     border-radius: 10px;
+    box-shadow: 0px 0px 5px #0a7474;
 }
 .icon{
     width: 80px;
     position: relative;
     right: -6px;
 }
+
+
 
  h1{
     margin-top: 15px;
@@ -28,6 +31,9 @@ body {
  }
  .selected-city::first-letter,ul::first-letter{
     text-transform: uppercase;
+ }
+ .selected-city,.city-temp,.forcastPreview{
+    color: #00b3b3;
  }
 .city-temp{
     text-align: right;
@@ -50,22 +56,24 @@ ul {
     left: -32px;
     top: -40px;
     margin-bottom: 50px;
+    color: #588DB7;
 }
-strong {
-    color: #0B5ED7;
+strong,.info {
+    color: #c54a73;
 }
-small{
-    color: #3d3c3c;
+.min-temp{
+    color: #c54a73;
 }
 hr {
     margin: 5px;
-    color: #31212C;
+    color: black;
 }
 .preview{
     text-align: center;
 }
 .forcastPreview{
-    transition: 200ms ease-in-out;
+    transition: 200ms  ease-in-out;
+    
 }
 .forcastPreview:hover{
      border: 0.2px solid #588DB7;
@@ -73,10 +81,14 @@ hr {
      border-radius: 10px;
      cursor: text;
      color: aliceblue;
-    
+    -webkit-text-stroke: 0.1px #012c4e;
 }
 .info{
     text-decoration: none;
+     font-weight: bold;
+}
+.info-name{
+   color: rgb(109, 207, 207);
 }
 .info-icon{
     width: 80px;
@@ -84,4 +96,12 @@ hr {
 .form-control:focus {
   border-color: #A17081;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+#submit-btn{
+    background-color: #2b7abb;
+    border:1.5px solid #2b7abb;
+}
+#submit-btn:hover{
+    background-color: #1d6baa;
+    border:1.5px solid #1d6baa;
 }

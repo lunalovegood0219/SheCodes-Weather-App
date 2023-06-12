@@ -20,9 +20,9 @@ function formatDate(timestamp) {
   let days = daysOfWeek[data.getDay()];
   return `${days} ${hour}:${minutes}`;
 }
-function previewWeather (timestamp){
-  let data = new Date (timestamp*1000);
-  let weekDays = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+function previewWeather(timestamp) {
+  let data = new Date(timestamp * 1000);
+  let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let weeksDay = data.getDay();
   return weekDays[weeksDay];
 }
@@ -33,7 +33,7 @@ function displayForcast(response) {
   forcast.shift();
   let forcastHtml = `<div class="row preview">`;
   forcast.forEach(function (forcastDay, index) {
-    if (index < 4){
+    if (index < 4) {
       forcastHtml =
         forcastHtml +
         `
@@ -45,7 +45,7 @@ function displayForcast(response) {
   }@2x.png" width="42px" alt=""> </div>
    <span class="forcast-temp">${Math.round(
      forcastDay.temp.max
-   )}°C</span> <small> <span>${Math.round(
+   )}°C</span> <small> <span class="min-temp">${Math.round(
           forcastDay.temp.min
         )}°C </span> </small>
    </div>
