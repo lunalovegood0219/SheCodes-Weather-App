@@ -21,16 +21,7 @@ body {
     position: relative;
     right: -6px;
 }
-@media screen and(max-width: 250px) {
-    .submit-btn{
-    font-size: 15px;
-}
-}
-@media screen and(min-width: 251px) {
-    .submit-btn{
-    font-size: 100px;
-}
-}
+
 
 
  h1{
